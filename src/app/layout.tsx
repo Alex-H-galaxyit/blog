@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Image from "next/image";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -28,6 +29,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Image
+          className="fixed top-0 left-0 z-[-1]"
+          src="/blur-back.svg"
+          alt="bg"
+          width={1433}
+          height={1020}
+        />
         {children}
       </body>
     </html>
